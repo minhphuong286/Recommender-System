@@ -1,0 +1,12 @@
+Những hiện tượng được coi là hiện hữu của recommender system:
+  - Youtube tự động chuyển các clip liên quan đến clip bạn đang xem. Youtube cũng tự gợi ý những clip mà có thể bạn sẽ thích.
+  - Khi bạn mua một món hàng trên Amazon, hệ thống sẽ tự động gợi ý “Frequently bought together”, hoặc nó biết bạn có thể thích món hàng nào dựa trên lịch sử mua hàng của bạn.
+  - Facebook hiển thị quảng cáo những sản phẩm có liên quan đến từ khoá bạn vừa tìm kiếm.
+  - Facebook gợi ý kết bạn.
+  - Netflix tự động gợi ý phim cho người dùng.
+
+Recommendation Systems là một mảng khá rộng của Machine Learning, có ý nghĩa và vai trò lớn được ứng dụng rộng rãi trong hầu hết các lĩnh vực điện tử, thương mại điện tử, mạng Internet.
+Có hai thực thể chính trong Recommendation Systems là users và items. 
+  - Users là người dùng. 
+  - Items là sản phẩm, ví dụ như các bộ phim, bài hát, cuốn sách, clip, hoặc cũng có thể là các users khác trong bài toán gợi ý kết bạn. 
+Mục đích chính của các Recommender Systems là dự đoán mức độ quan tâm của một user tới một item nào đó, qua đó có chiến lược recommend phù hợp.
