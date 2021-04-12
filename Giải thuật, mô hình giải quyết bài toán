@@ -1,0 +1,24 @@
+# Các Recommendation Systems thường được chia thành hai nhóm lớn:
+  1) Content-based systems: đánh giá đặc tính của items được recommended. 
+    Ví dụ: một user xem rất nhiều các bộ phim về cảnh sát hình sự, vậy thì gơi ý một bộ phim trong cơ sở dữ liệu có chung đặc tính hình sự tới user này, ví dụ phim Người phán xử. 
+    Cách tiếp cận này yêu cầu việc sắp xếp các items vào từng nhóm hoặc đi tìm các đặc trưng của từng item. Tuy nhiên, có những items không có nhóm cụ thể và việc xác định nhóm 
+    hoặc đặc trưng của từng item đôi khi là bất khả thi.
+  2) Collaborative filtering: hệ thống gợi ý items dựa trên sự tương quan (similarity) giữa các users và/hoặc items. 
+    Có thể hiểu rằng ở nhóm này một item được recommended tới một user dựa trên những users có hành vi tương tự. 
+    Ví dụ: users A, B, C đều thích các bài hát của Noo Phước Thịnh. Ngoài ra, hệ thống biết rằng users B, C cũng thích các bài hát của Bích Phương nhưng chưa có thông tin về 
+    việc liệu user A có thích Bích Phương hay không. Dựa trên thông tin của những users tương tự là B và C, hệ thống có thể dự đoán rằng A cũng thích Bích Phương và 
+    gợi ý các bài hát của ca sĩ này tới A.
+
+# Utility: 
+Có hai thực thể chính trong các Recommendation Systems là users và items. Mỗi user sẽ có mức độ quan tâm (degree of preference) tới từng item khác nhau. 
+Mức độ quan tâm này, nếu đã biết trước, được gán cho một giá trị ứng với mỗi cặp user-item. Giả sử rằng mức độ quan tâm được đo bằng giá trị user rate cho item, 
+ta tạm gọi giá trị này là rating. Tập hợp tất cả các ratings, bao gồm cả những giá trị chưa biết cần được dự đoán, tạo nên một ma trận gọi là utility matrix
+  Ví dụ: image: https://machinelearningcoban.com/assets/23_contentbasedrecommendersys/utility1.png
+  utility matrix với hệ thống Gợi ý bài hát. Các bài hát được người dùng đánh giá theo mức độ từ 0 đến 5 sao. 
+  Các dấu '?' nền màu xám ứng với việc dữ liệu chưa tồn tại trong cơ sở dữ liệu. Recommendation Systems cần phải tự điền các giá trị này.
+
+# Ứng với từng nhóm mà ta có cách tiếp cận, xậy dựng model khác nhau:
+  1) Content-based system: 
+  Trong các hệ thống content-based, tức dựa trên nội dung của mỗi item, chúng ta cần xây dựng một bộ hộ sơ (profile) cho mỗi item. 
+  Profile này được biểu diễn dưới dạng toán học là một feature vector. 
+  Trong những trường hợp đơn giản, feature vector được trực tiếp trích xuất từ item.
