@@ -22,3 +22,13 @@ ta tạm gọi giá trị này là rating. Tập hợp tất cả các ratings, 
   Trong các hệ thống content-based, tức dựa trên nội dung của mỗi item, chúng ta cần xây dựng một bộ hộ sơ (profile) cho mỗi item. 
   Profile này được biểu diễn dưới dạng toán học là một feature vector. 
   Trong những trường hợp đơn giản, feature vector được trực tiếp trích xuất từ item.
+  
+  2) Collaborative filtering:
+  Có 2 phương pháp tiêu biểu là Neighborhood-based Collaborative Filtering (NBCF) và Matrix Factorization Collaborative Filtering (MFCF)
+  - Neighborhood-based Collaborative Filtering (NBCF):
+    Ý tưởng cơ bản của NBCF là xác định mức độ quan tâm của một user tới một item dựa trên các users khác gần giống với user này. Việc gần giống nhau giữa các users 
+  có thể được xác định thông qua mức độ quan tâm của các users này tới các items khác mà hệ thống đã biết
+    Việc xác định mức độ quan tâm của mỗi user tới một item dựa trên mức độ quan tâm của similar users tới item đó còn được gọi là User-user collaborative filtering. Có một 
+  hướng tiếp cận khác được cho là làm việc hiệu quả hơn là Item-item collaborative filtering. Trong hướng tiếp cận này, thay vì xác định user similarities, 
+  hệ thống sẽ xác định item similarities. Từ đó, hệ thống gợi ý những items gần giống với những items mà user có mức độ quan tâm cao.
+  - Matrix Factorization Collaborative Filtering (MFCF)
